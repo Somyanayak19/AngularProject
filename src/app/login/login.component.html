@@ -1,0 +1,85 @@
+<div class="loginForm p-justify-center" style="display: flex;
+margin: 0;" >
+    
+    
+        
+        
+      
+     
+   <form #loginForm="ngForm"   style="width: 29%;padding: 20px;  background: #ffffff;
+   color: #495057;margin-top: 5%;
+   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+   border-radius: 3px;" (ngSubmit)="onSubmit()">
+   <div style="text-align: center;font-size: 22px; margin-bottom: 23px;">  <b> Log In </b></div>
+    <!-- [(ngModel)]="login.loginId"  #username="ngModel"   -->
+    <div class="p-field p-col-12">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-user"></i>
+            </span>
+            <span class="p-float-label">
+                <input id="username" [(ngModel)]="login.username" (keypress)="onchange()"
+                    #username="ngModel" name="username" aria-describedby="username-help" type="text"
+                    pInputText required email>
+                <label for="username" style="color: #53535a;">Email Address</label>
+            </span>
+        </div>
+        <span id="username-help" class="error"
+            *ngIf="username.invalid && (username.dirty || username.touched)">
+            <div *ngIf="username.errors?.required" class="errors">Email Address is required.
+            </div>
+            <div *ngIf="username.errors?.email" class="errors">Enter proper email address.</div>
+        </span>
+    </div>
+
+    <div class="p-field p-col-12">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-lock"></i>
+            </span>
+            <span class="p-float-label">
+                <input id="password" [(ngModel)]="login.password" (keypress)="onchange()"
+                    #password="ngModel" name="password" type="password" pInputText required>
+                <label style="color: #53535a;" for="password">Password</label>
+
+
+            </span>
+        </div>
+        <span class="error" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors?.required" class="errors">Password is required.</div>
+        </span>
+        <div style="margin-top: 3px;" *ngIf="passwordIncorrect" class="error" id="passwordIncorrect">
+            <div class="errors">Either user ID or Password are incorrect
+            </div>
+        </div>
+    </div>
+
+
+    
+    <span class="p-grid">
+        <!-- <div class="p-col-12 " [style]="{'padding':'0px'}"> -->
+        <div class="p-col-12 p-justify-center" style="display: flex;
+        margin: 0;">
+            <button pButton type="submit"  [disabled]="!loginForm.valid"
+                class="ui-button-raised ui-button-rounded" style="width: 50%;" iconPos="right"
+                label="LogIn" ></button>
+            <br>
+           
+
+        </div>
+        <!-- <div class="p-md-5 p-col-12">
+            <button pButton type="button" [routerLink] ="['/merchant/login/otp']" style="width: 100%;" class="ui-button-raised ui-button-rounded ui-button-secondary" label="Login with OTP"></button>
+        </div> -->
+        <!-- </div> -->
+        <br>
+        <br>
+      <!--  <div *ngIf="!hideUserLogin" class="p-col-12" style="text-align: center;"> Don't have an account
+            ? <a [routerLink]="['/merchant/registration']">Sign up</a></div>-->
+    </span>
+   
+
+
+
+</form>
+ 
+</div>

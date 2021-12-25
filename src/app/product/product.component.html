@@ -1,0 +1,60 @@
+<input type="text" id="ct-name-fld" [(ngModel)]="value"
+(ngModelChange)="getTemplateNames()"
+ autocomplete="off"
+(keydown)="eventHandler($event)" 
+required/>
+
+<div id="outerDiv" 
+ autocomplete="off" 
+class="lookup-dropdown">
+<div *ngFor="let data of templatesList;let idx=index" [ngClass]="{'highlight-row' :  idx === focusedIdx }">
+
+  <span class="b2">{{ data.name }}</span>
+
+</div>
+</div>
+
+
+
+
+
+ <h3 style="margin: 5px;margin-left: 22px;">Product List</h3>
+<div style="display: inline-flex;flex-wrap: wrap;">
+ 
+    <div  *ngFor="let item of data;"  style="position:relative;background: white;margin: 20px;">
+       <div (click)="selectProduct(item)">
+           <div style="padding: 10px;padding-bottom: 0px;" > <img [src]="item.image" style="width:200px;height:200px"></div>
+      <div style="padding-bottom: 8px;padding-top: 8px;border-top: 1px solid #2f4f4f66;"> <b style="padding: 5px;"> {{item.name}}</b>
+       <div style="padding: 5px;padding-top: 0px;color: gray;">{{item.material}}</div>
+       <div style="padding: 5px;padding-top: 0px;"><b>Rs. {{item.mrp}}</b>&nbsp;<s style="color: gray;">Rs. {{item.sellingPrice}}</s>
+         &nbsp;<span style="color: red;font-size: 13px;">({{item.discount}}% OFF)</span></div>       </div>
+        </div>
+</div>
+    </div>
+
+    <p-dialog [(visible)]="displayProduct" [style]="{width: '50vw'}">
+       <div class="p-grid">
+         <div class="p-col-4" style="height:200px;">
+         <img [src]="viewProduct.image" style="width:100%;height:100%">
+         </div>
+     <div class="p-col"> <div style="padding-bottom: 12px;border-bottom: 1px solid #8080806e;"><b>{{viewProduct.name}}</b>
+      <div style="padding-top: 0px;color: gray;">{{viewProduct.material}}</div>
+        </div>
+        <div style="padding-top: 10px;"><b>Rs. {{viewProduct.mrp}}</b> &nbsp;<s style="color: gray;">Rs. {{viewProduct.sellingPrice}}</s>
+          &nbsp;<span style="color: red;font-size: 13px;">({{viewProduct.discount}}% OFF)</span></div>
+         
+
+           
+            <!--<div style="margin-top: 6px;">
+            <div id="circle" style="margin: 5px;" *ngFor="let s of viewProduct.size"><b style="margin-left: 8px;
+            ">{{s}}</b></div>
+          </div>-->
+         
+        </div>
+      </div>
+        <p-footer>
+          <button pButton type="submit" pRipple
+          class="p-button-danger"  icon="pi pi-shopping-cart" (click)="addtobag(viewProduct)" iconPos="left"
+          label="Add To Bag" ></button>
+        </p-footer>
+    </p-dialog>

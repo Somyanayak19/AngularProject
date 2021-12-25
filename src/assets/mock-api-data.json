@@ -1,0 +1,94 @@
+[{
+    "name":"Shirt",
+    "color":"Black",
+    "material":"Causal Shirt",
+    "image":"https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg",
+     "mrp":"799",
+     "sellingPrice":"999",
+     "discount":"5",
+     "size":["S","M","L", "XL"]
+
+
+},
+{
+    "name":"T-Shirt",
+    "color":"White",
+    "material":"Round Neck",
+    "image":"https://www.collinsdictionary.com/images/full/tshirt_204029461_1000.jpg",
+    "mrp":"899",
+    "sellingPrice":"1000",
+    "discount":"10",
+    "size":["S","M","L", "XL"]
+
+     
+
+},
+{
+    "name":"Shirt",
+    "color":"Sky Blue",
+    "size":["S","M","L", "XL"],
+    "material":"Women Shirt",
+    "image":"https://5.imimg.com/data5/GV/EI/MY-26510312/women-denim-shirt-500x500.jpg",
+    "mrp":"599",
+    "sellingPrice":"699",
+    "discount":"15"
+
+     
+
+},
+{
+    "name":"T-Shirt",
+    "color":"Blue",
+    "size":["S","M","L", "XL"],
+    "material":"Sport Round Neck",
+    "image":"https://marvel-b1-cdn.bc0a.com/f00000000186169/www.thegraphicedge.com/static/media/designer/default-products/resized_8000_royal_front_5076A05470C68_1_69_F7D8933256872.jpg",
+    "mrp":"499",
+    "sellingPrice":"599",
+    "discount":"20"
+
+     
+
+},
+{
+    "name":"Top",
+    "color":"White",
+    "size":["S","M","L", "XL"],
+    "material":"Women Top",
+    "image":"https://i.pinimg.com/564x/50/9b/e8/509be80f30167d7c6599539e9f3e3d62.jpg",
+    "mrp":"299",
+    "sellingPrice":"350",
+    "discount":"5"
+
+     
+
+},
+
+{
+    "name":"Kurta",
+    "color":"White",
+    "size":["S","M","L", "XL"],
+    "material":"Women Kurta",
+    "image":"https://i.pinimg.com/originals/aa/71/73/aa71732d2b9e3d654d3cf20992b5db41.jpg",
+    "mrp":"799",
+    "sellingPrice":"850",
+    "discount":"5"
+
+     
+
+},
+{
+    "name":"Blue Kurta",
+    "color":"White",
+    "size":["S","M","L", "XL"],
+    "material":"Women Kurta",
+    "image":"https://i.pinimg.com/originals/d4/c4/28/d4c428b09322aba7cdb1298ed55bffca.jpg",
+    "mrp":"799",
+    "sellingPrice":"850",
+    "discount":"5"
+
+     
+
+}
+
+
+]

@@ -1,0 +1,5 @@
+<div style="padding: 0px; margin: 0px; z-index:1200;" class="p-col-12" >    <p-header id="header"  >        <span style="float:left" >  
+                   </span>    
+        <span style="float:right;margin-right:1%" *ngIf="checkUrl()" (click)="logout()" [routerLink]="['/login']" >Logout </span>
+      &nbsp;&nbsp;   <span style="float:right;margin-right:1%" *ngIf="checkUrl()" ><span><i class="pi pi-shopping-cart" [routerLink]="['/cart']"></i>
+        &nbsp;<b style="color: red;">{{count}}</b></span>&nbsp;&nbsp;</span> </p-header></div>

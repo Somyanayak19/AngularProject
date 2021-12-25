@@ -1,0 +1,24 @@
+#header {
+	position: fixed;
+	top: 0px;
+	background: #55559d;
+	color: white;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 15px;
+	z-index: 12000;
+    margin-left: -33px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+#circle {
+    margin-top: 10px;
+    height: 25px;
+  width: 25px;
+  border: 1px solid #8080806e;
+  border-radius: 50%;
+  line-height: 31px;
+  display: inline-block;
+}

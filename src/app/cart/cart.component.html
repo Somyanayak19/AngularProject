@@ -1,0 +1,13 @@
+<h3 style="margin: 5px;margin-left: 22px;"><i style="color:#55559d;font-weight: bold;"[routerLink]="['/product']" class="pi pi-arrow-left"></i>&nbsp;My Bag</h3>
+<div style="display: inline-flex;flex-wrap:wrap">
+   
+    <div  *ngFor="let item of CartItem;"  style="position:relative;background: white;margin: 20px;">
+       <div>
+           <div style="padding: 10px;padding-bottom: 0px;" > <img [src]="item.image" style="width:200px;height:200px"></div>
+      <div style="padding-bottom: 8px;padding-top: 8px;border-top: 1px solid #2f4f4f66;"> <b style="padding: 5px;"> {{item.name}}</b>
+       <div style="padding: 5px;padding-top: 0px;color: gray;">{{item.material}}</div>
+       <div style="padding: 5px;padding-top: 0px;"><b>Rs. {{item.mrp}}</b>&nbsp;<s style="color: gray;">Rs. {{item.sellingPrice}}</s>
+         &nbsp;<span style="color: red;font-size: 13px;">({{item.discount}}% OFF)</span></div>       </div>
+        </div>
+</div>
+    </div>
